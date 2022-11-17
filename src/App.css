@@ -1,38 +1,121 @@
+h1,
+h6,
+h2 {
+  margin-top: 0;
+  white-space: "normal";
+  word-wrap: "break-word";
+}
+
+p {
+  font-size: 1em;
+}
+
+@media (max-width: 800px) {
+  p {
+    font-size: 0.6em;
+  }
+}
+
 .App {
   text-align: center;
+  height: 100%;
+}
+header {
+  margin-top: 0.7em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+select {
+  max-width: 100%;
+  width: 20em;
+  padding: 0.75em;
+  background-color: rgb(242, 242, 242);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+select:focus {
+  background-color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.line {
+  height: 0.2px;
+  background: black;
+}
+
+.box {
+  border-radius: 2em;
+  background-color: white;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 1.9em;
+  margin-right: 1.9em;
+  margin-top: 4em;
+  margin-bottom: 7.5em;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+}
+
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 2em;
+  padding-right: 2em;
+  max-width: 100%;
+}
+
+input {
+  max-width: 100%;
+  border-radius: 0.2em;
+  background-color: rgb(242, 242, 242);
+  width: 20em;
+  height: 2em;
+  border: solid 0.1em rgb(22, 22, 40);
+  transition: width 0.25s ease-in-out;
+  box-sizing: border-box;
+  text-align: start;
+}
+
+input:focus {
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  background-color: white;
+}
+
+input:focus {
+  width: 22em;
+  height: 2.5em;
+}
+
+button {
+  background-color: rgb(10, 6, 27);
+  padding: 1em;
+  border: none;
+  border-radius: 1em;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: white;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+  background-color: rgb(10, 6, 27);
+  padding: 1em;
+  border: none;
+  border-radius: 1em;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: #2939ec;
+  transition: 0.3s;
 }
