@@ -119,31 +119,71 @@ function App() {
 
   return (
     <div className="App">
+      <header>
+        <h1>WALLET ENCRYPTER</h1>
+        <div className="line" />
+      </header>
+      <p
+        style={{
+          marginBottom: "4em",
+        }}
+      />
       <h4> GENERATE A NEW WALLET AND ENCRYPT IT</h4>
+      <p />
+      <h6
+        style={{
+          color: "grey",
+        }}
+      >
+        {" "}
+        Info: Create a new wallet and encrypt it with a password of your choice{" "}
+      </h6>
       <form onSubmit={encryptNew}>
         <input id="pass" placeholder="Password" required /> <p />
         <button type="submit"> ENCRYPT </button>
       </form>
+      <p
+        style={{
+          marginBottom: "3em",
+        }}
+      />
       <h4>
         {" "}
         ENCRYPT A WALLET VIA PRIVATE KEY <p />{" "}
-        <h6 style={{ color: "grey" }}>
-          {" "}
-          (Wallets generated using a private key do not have a mnemonic phrase){" "}
-        </h6>{" "}
       </h4>
+      <h6
+        style={{
+          color: "grey",
+        }}
+      >
+        {" "}
+        Info: Encrypt your private key with a password of your choice. <br />{" "}
+        (Wallets generated using a private key do not have a mnemonic phrase)
+      </h6>
       <form onSubmit={encryptPK}>
         <input id="pk" placeholder="Private Key" required /> <p />
         <input id="pass" placeholder="Password" required /> <p />
         <button type="submit"> ENCRYPT </button>
-      </form>
+      </form>{" "}
+      <p
+        style={{
+          marginBottom: "3em",
+        }}
+      />
       <h4> ENCRYPT A WALLET VIA MNEMONIC PHRASE </h4>
+      <h6
+        style={{
+          color: "grey",
+        }}
+      >
+        {" "}
+        Info: Encrypt your Mnemonic phrase with a password of your choice{" "}
+      </h6>
       <form onSubmit={encryptMnemonic}>
         <input id="mnemonic" placeholder="Mnemonic phrase" required /> <p />
         <input id="pass" placeholder="Password" required /> <p />
         <button type="submit"> ENCRYPT </button>
       </form>
-
       {isEncrypting ? (
         <div
           className="box"
@@ -174,7 +214,6 @@ function App() {
         </div>
       ) : null}
       <p />
-
       {currentWalletInfo.walletAddress !== "" ? (
         <div
           className="box"
