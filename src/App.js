@@ -165,15 +165,15 @@ function App() {
   }
 
   function displays(val) {
-    if (val == "nw") {
+    if (val === "nw") {
       r.style.setProperty("--nw", "block");
       r.style.setProperty("--pk", "none");
       r.style.setProperty("--mp", "none");
-    } else if (val == "pk") {
+    } else if (val === "pk") {
       r.style.setProperty("--nw", "none");
       r.style.setProperty("--pk", "block");
       r.style.setProperty("--mp", "none");
-    } else if (val == "mp") {
+    } else if (val === "mp") {
       r.style.setProperty("--nw", "none");
       r.style.setProperty("--pk", "none");
       r.style.setProperty("--mp", "block");
