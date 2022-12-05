@@ -1,3 +1,21 @@
+:root {
+  --nw: block;
+  --pk: none;
+  --mp: none;
+}
+
+.nw {
+  display: var(--nw);
+}
+
+.pk {
+  display: var(--pk);
+}
+
+.mp {
+  display: var(--mp);
+}
+
 h1,
 h6,
 h2 {
@@ -118,4 +136,25 @@ a {
   text-decoration: none;
   color: #2939ec;
   transition: 0.3s;
+}
+
+#ul-nb {
+  list-style: none;
+  margin: 2px;
+  padding: 3px;
+}
+#ul-nb li {
+  float: left;
+  padding: 10px;
+  border: solid 1px;
+  border-radius: 0.6em;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-left: 5px;
+}
+#ul-nb li:hover {
+  background: rgb(0, 0, 0);
+  opacity: 0.8;
+  color: white;
 }
