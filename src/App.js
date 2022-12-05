@@ -83,6 +83,9 @@ function App() {
     }
 
     setIsEncrypting(false);
+    NotificationManager.success(
+      `Wallet successfully encrypted!\nBe sure to keep all information private and secure`
+    );
   }
 
   async function encryptPK(event) {
@@ -121,6 +124,9 @@ function App() {
     }
 
     setIsEncrypting(false);
+    NotificationManager.success(
+      `Wallet successfully encrypted!\nBe sure to keep all information private and secure`
+    );
   }
 
   async function encryptMnemonic(event) {
@@ -162,6 +168,9 @@ function App() {
     }
 
     setIsEncrypting(false);
+    NotificationManager.success(
+      `Wallet successfully encrypted!\nBe sure to keep all information private and secure`
+    );
   }
 
   function displays(val) {
