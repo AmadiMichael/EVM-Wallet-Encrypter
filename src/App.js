@@ -196,6 +196,32 @@ function App() {
         <NotificationContainer />
         <div className="line" />
       </header>
+      <h5>
+        Created by{" "}
+        <a
+          href="https://twitter.com/AmadiMichaels"
+          target="_blank"
+          rel="noreferrer"
+          style={{ textDecoration: "black 1px" }}
+        >
+          @AmadiMichaels{" "}
+        </a>
+        and open source{" "}
+        <a
+          href="https://github.com/AmadiMichaels/evm-data"
+          target="_blank"
+          rel="noreferrer"
+          style={{ textDecoration: "black 1px" }}
+        >
+          here
+        </a>
+      </h5>
+
+      <p
+        style={{
+          marginBottom: "4em",
+        }}
+      />
 
       <h3> ENCRYPT ANY EVM WALLET OFFLINE WITH A PASSWORD INTO A JSON FILE </h3>
 
