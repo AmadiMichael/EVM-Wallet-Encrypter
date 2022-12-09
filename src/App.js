@@ -208,7 +208,7 @@ function App() {
         </a>
         and open source{" "}
         <a
-          href="https://github.com/AmadiMichaels/evm-data"
+          href="https://github.com/AmadiMichael/EVM-Wallet-Encrypter"
           target="_blank"
           rel="noreferrer"
           style={{ textDecoration: "black 1px" }}
