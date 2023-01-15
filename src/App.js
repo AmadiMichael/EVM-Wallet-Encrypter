@@ -117,7 +117,6 @@ function App() {
 
     try {
       wallet = new ethers.Wallet(event.target.pk.value);
-      console.log(wallet);
       await encrypter(wallet, event.target.pass.value);
     } catch (err) {
       setErrorMessage(err.message);
@@ -158,7 +157,14 @@ function App() {
       let wallet;
 
       try {
-        wallet = ethers.Wallet.fromMnemonic(event.target.mnemonic.value);
+        const masterNode = ethers.utils.HDNode.fromMnemonic(
+          event.target.mnemonic.value
+        );
+        const childNode = masterNode.derivePath(
+          `m/44'/60'/0'/0/${event.target.index.value}`
+        );
+
+        wallet = new ethers.Wallet(childNode.privateKey);
         await encrypter(wallet, event.target.pass.value);
       } catch (err) {
         setErrorMessage(err.message);
@@ -319,10 +325,13 @@ function App() {
           }}
         >
           {" "}
-          Info: Encrypt your Mnemonic phrase with a password of your choice{" "}
+          Info: Encrypt a specific wallet index (derivation path) of your
+          Mnemonic phrase with a password of your choice <br /> NB: Indexes
+          start from 0
         </h6>
         <form onSubmit={encryptMnemonic}>
           <input id="mnemonic" placeholder="Mnemonic phrase" required /> <p />
+          <input id="index" placeholder="Wallet Index" required /> <p />
           <input id="pass" placeholder="Password" required /> <p />
           <button type="submit" disabled={isEncrypting}>
             {" "}
